@@ -1,0 +1,41 @@
+var user = prompt ("You are walking the halls of Hogwarts at night when you are stopped by Professor Snape. Do you EXPLAIN yourself, FIGHT him, or RUN away?").toUpperCase();
+switch(user)
+{
+    case 'EXPLAIN':
+        var reason = prompt("Do you have a real reason (YES or NO)?").toUpperCase();
+        var lie = prompt("Do you have a good lie?").toUpperCase();
+        if (reason === 'YES' || lie === 'YES')
+        {
+            console.log("You tell Professor Snape you were sleepwalking!");
+        }
+        else
+        {
+            console.log("Oh no! Busted! 20 points from your House!");
+        }
+        break;
+    case 'FIGHT':
+        var fast = prompt("Are you fast (YES or NO)?").toUpperCase();
+        var spell = prompt("Do you know the disarming spell?").toUpperCase();
+        if (fast === 'YES' && spell === 'YES')
+        {
+        console.log("You cast a disarming spell at Professor Snape!");
+        }
+        else
+        {
+            console.log("Oh no! Professor Snape disarms you! 250 points from your House!");
+        }
+        break;
+    case 'RUN':
+        var quick = prompt("Can you run quickly (YES or NO)?").toUpperCase();
+        if (quick === 'YES')
+        {
+            console.log("You run away!");
+        }
+        else
+        {
+            console.log("You try to run away but Professor Snape grabs your robe before you can flee! 50 points from your House!")
+        }
+        break;
+    default:
+        console.log("I do not understand. What did you decide to do?");
+}
